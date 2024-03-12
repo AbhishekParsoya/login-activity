@@ -53,11 +53,7 @@ exports.getLoginActivities = async (req, res) => {
         }
 
 
-        const result  =  await LoginActivity.findAll({
-            where: {
-                userId: user.id
-            }
-        })
+        const result  =  await LoginActivity.findAll()
         console.log("sdjsdnfjesnfjner------>", email, "dmmsdms", result);
         res.status(200).json({
         status: 'success',
